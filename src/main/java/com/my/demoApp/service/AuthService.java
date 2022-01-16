@@ -2,7 +2,7 @@ package com.my.demoApp.service;
 
 import com.my.demoApp.dto.LoginRequest;
 import com.my.demoApp.dto.RegisterRequest;
-import com.my.demoApp.model.User;
+import com.my.demoApp.model.Userr;
 import com.my.demoApp.repository.UserRepository;
 import com.my.demoApp.security.JwtProvider;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class AuthService {
     private JwtProvider jwtProvider;
 
     public void signup(RegisterRequest registerRequest) {
-        User user = new User();
+        Userr user = new Userr();
         user.setUsername(registerRequest.getUsername());
         user.setPassword(encodePassword(registerRequest.getPassword()));
         user.setEmail(registerRequest.getEmail());
